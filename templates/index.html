@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Index Page</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <h1>Welcome to the Index Page</h1>
-    <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
-    <a href="{{ url_for('message') }}">Go to Message Page</a>
+    <img src="/static/logo.png" alt="Logo">
+    <a href="/message">Go to Message Page</a>
 </body>
 </html>
-

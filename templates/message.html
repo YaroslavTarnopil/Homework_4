@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Message Page</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Message Page</h1>
-    <form action="{{ url_for('submit_message') }}" method="post">
+    <h1>Send a Message</h1>
+    <form action="/message" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
         <label for="message">Message:</label>
-        <input type="text" id="message" name="message" required>
-        <button type="submit">Submit</button>
+        <textarea id="message" name="message" required></textarea><br>
+        <input type="submit" value="Send">
     </form>
+    <a href="/">Go back to Index Page</a>
 </body>
 </html>
